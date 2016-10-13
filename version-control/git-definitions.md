@@ -13,3 +13,5 @@
 
 * What is a merge conflict?
 *A merge conflict is when a branch cannot be merged with another branch because of conflicting information between the branch itself and where it's being merged.* More information on Merge Conflict and how to deal with them [Here.](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/merge-conflicts)
+
+# This is my Minor change!
