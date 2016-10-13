@@ -1,0 +1,15 @@
+1. What is a block-level element? What are some examples of block-level elements? What are they used for? 
+
+	Block level elements are elements that take up an entire row of space on a webpage. Some examples are paragraph (<p>), footers (<footer>), Nav (<nav>). Block levels are used to add samantic value.
+
+2. Can you find any good charts or resources on when you should use these elements? For example, when might you use a div versus a section?
+	
+	You'd want to use "div" for styling, and "section" identifying samantic value of content.
+
+3. What is an inline element?
+
+	Inline elements are primarily for styling and do not take an entire row of a web page like a block element does, and are the beginning and end of an elements influence. i.e. you'd never nest a block element inside a inline element.
+
+4. Do inline elements usually nest inside block-level elements, or is it typically the other way around?
+
+	Inline elements do usally nest inside block-level elements because block level gives the samantic value while inline gives the style value.
