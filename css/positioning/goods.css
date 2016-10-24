@@ -1,0 +1,20 @@
+.pic {display: block;}
+
+#octi {
+	position: fixed;
+	z-index: 1;
+	top: 60px;
+	left: 560px;
+}
+#hats {
+	position: fixed;
+	z-index: 2;
+	top: 10px;
+	left: 540px;
+}
+#glass {
+	position: fixed;
+	z-index: 3;
+	top: 160px;
+	left: 600px;
+}
