@@ -1,3 +1,6 @@
+.wide {
+  max-width: 960px;
+}
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -10,8 +13,13 @@ cite {
 }
 
 #external-links ul {
+  width: 200px;
   list-style-type: none;
   padding-left: 0px;
+}
+
+#mainc {
+  width: 756px;
 }
 
 /* you're welcome to edit the
@@ -30,3 +38,18 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+@media screen and (max-width: 500px) {
+  ul > li {
+    font-size: 30px;
+  }
+img {
+  width: 75%}
+}
+}
+/*Questions:
+What is mobile-first design
+Application developed for smaller screens first, then adjusted for larger screens.
+
+What is the float property in CSS? What are the pros and cons of using the float property instead of the display property?
+Float allows you to place and element within a site based on it's relativity to the dimentions. Pros: no need to worry 
+about playing around with specfic padding px. Cons: not always as accurate as one might need.*/
