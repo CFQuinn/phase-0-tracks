@@ -1,0 +1,24 @@
+#contact-info p {font-size: .8em;}
+section > p {color: red;}
+.job {
+	background-color: #e9e5dc;
+	padding: 10px;
+	border-radius: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.list {font-size: .8em;}
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+/*What does the "Cascading" part of Cascading Style Sheets mean? When there is a conflict between two CSS rules that select the same element, how does your browser decide which rule to use?
+Cascading is the order in which properties are applied on a particular element(s).
+When there is a conflict between two CSS rules that select the same element the browser typically goes with the more specific rule.
+
+What is a pseudoselector?
+A pseudoselector is used to style specified parts of an element. example in code above
+
+How can you use CSS to select the child element of another element?
+You have to direct an element to element path for to specify. Example about */
