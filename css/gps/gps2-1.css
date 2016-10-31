@@ -1,1 +1,8 @@
 body {background: blue}
+
+#column-1 {
+	float: left ;
+  width: 50% ;}
+
+#column-2 {float: right ;
+  width: 50% ;}
