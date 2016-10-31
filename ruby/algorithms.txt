@@ -1,0 +1,13 @@
+- When entering an elevator
+	- Until you hear a response:
+		- Ask which floor I'd like to go to.
+	- When answered:
+		- select floor number i've said.
+
+Task: Warming up food
+
+- When heating up leftovers:
+	- until food is hot:
+		- place food in microwave for 1 minute
+	- When food is hot:
+		- eat food
