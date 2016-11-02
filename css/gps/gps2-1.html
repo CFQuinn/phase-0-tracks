@@ -2,7 +2,7 @@
 Write your names here:
 1.
 2.
-We spent [#] hours on this challenge.
+We spent [2] hours on this challenge.
 -->
 
 <!-- This challenge uses HTML5 syntax that may not be available in all browsers (It works in Chrome and Safari, from my testing. (<details> and<summary>). -->
@@ -17,11 +17,12 @@ We spent [#] hours on this challenge.
 
   <body>
     <header>
-      <h1>GitHub: Git Cheat Sheet</h1>
-      <p>Git is the open source distributed version control system that
+      <section class="Hback"><div id="h1"><h1>GitHub</h1></div>
+      <div id="h2"><h1> Git Cheat Sheet</h1></div></section>
+      <div id="container1"><p>Git is the open source distributed version control system that
         facilitates GitHub activities on your laptop or desktop.
         This cheat sheet summarizes commonly used Git command line
-        instructions for quick reference.</p>
+        instructions for quick reference.</p></div>
     </header>
 
     <section class="column-1">
@@ -75,7 +76,72 @@ We spent [#] hours on this challenge.
           <p>Downloads a project and its entire version history</p>
         </details>
       </article>
+
+      <article>
+        <h2>REFACTOR FILENAMES</h2>
+        <p>Relocate and remove versioned files</p>
+
+        <details>
+          <summary><code>$ git rm [file]</code></summary>
+          <p>Deletes the file from the working directory and stages the deletion</p>
+        </details>
+
+        <details>
+          <summary><code>$ git rm --cached [file]</code></summary>
+          <p>Removes the file from version control but preserves the file locally</p>
+        </details>
+
+        <details>
+          <summary><code>$ git mv [file-original] [file-renamed]</code></summary>
+          <p>Changes the file name and prepares it for commit</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>SUPPRESS TRACKING</h2>
+        <p>Exclude temporary files and paths</p>
+
+        <details>
+          <summary><code>*.log
+                    build/
+                    temp-*
+          </code></summary>
+          <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
+        </details>
+
+        <details>
+          <summary><code>$ git ls-files --other --ignored --exclude-standard</code></summary>
+          <p>Lists all ignored files in this project</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>SAVE FRAGMENTS</h2>
+        <p>Shelve and restore incomplete changes</p>
+
+        <details>
+          <summary><code>$ git stash</code></summary>
+          <p>Temporarily stores all modified tracked files</p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash list</code></summary>
+          <p>Lists all stashed changesets</p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash pop</code></summary>
+          <p>Restores the most recently stashed files</p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash drop</code></summary>
+          <p>Discards the most recently stashed changeset</p>
+        </details>
+
+      </article>
 </section>
+
 <section class="column-2">
       <article>
         <h2>MAKE CHANGES</h2>
@@ -141,73 +207,7 @@ We spent [#] hours on this challenge.
           <p>Deletes the specified branch</p>
         </details>
       </article>
-</section>
-    <section class="column-1">
-      <article>
-        <h2>REFACTOR FILENAMES</h2>
-        <p>Relocate and remove versioned files</p>
 
-        <details>
-          <summary><code>$ git rm [file]</code></summary>
-          <p>Deletes the file from the working directory and stages the deletion</p>
-        </details>
-
-        <details>
-          <summary><code>$ git rm --cached [file]</code></summary>
-          <p>Removes the file from version control but preserves the file locally</p>
-        </details>
-
-        <details>
-          <summary><code>$ git mv [file-original] [file-renamed]</code></summary>
-          <p>Changes the file name and prepares it for commit</p>
-        </details>
-      </article>
-
-      <article>
-        <h2>SUPPRESS TRACKING</h2>
-        <p>Exclude temporary files and paths</p>
-
-        <details>
-          <summary><code>*.log
-                    build/
-                    temp-*
-          </code></summary>
-          <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
-        </details>
-
-        <details>
-          <summary><code>$ git ls-files --other --ignored --exclude-standard</code></summary>
-          <p>Lists all ignored files in this project</p>
-        </details>
-      </article>
-
-      <article>
-        <h2>SAVE FRAGMENTS</h2>
-        <p>Shelve and restore incomplete changes</p>
-
-        <details>
-          <summary><code>$ git stash</code></summary>
-          <p>Temporarily stores all modified tracked files</p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash list</code>Lists all stashed changesets</summary>
-          <p></p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash pop</code></summary>
-          <p>Restores the most recently stashed files</p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash drop</code></summary>
-          <p>Discards the most recently stashed changeset</p>
-        </details>
-
-      </article>
-</section>
-<section class="column-1">
       <article>
         <h2>REVIEW HISTORY</h2>
         <p>Browse and inspect the evolution of project files</p>
