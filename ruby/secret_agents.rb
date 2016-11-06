@@ -54,3 +54,28 @@ def decrypt(str)
 	decrypted
 end
 
+#asking which which action they chose to take
+puts "Would you like to decypt or encrypt a password?"
+answer= gets.chomp
+
+#recive content for the action to be taken 
+puts "What is the password?"
+pass= gets.chomp
+
+#running the action according to their preference
+if answer == "encrypt" || answer == "Encrypt"
+	puts encrypt(pass)
+end
+
+if answer == "decrypt" || answer == "Decrypt"
+	puts decrypt(encrypt(pass))
+end
+
+
+
+
+
+
+
+
+
