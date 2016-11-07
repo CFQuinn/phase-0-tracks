@@ -25,8 +25,8 @@ bulls_player_names.map! do |name|
 
 end
 
-sigil.each do |team, logo|
-  puts "#{sigil} is the logo for #{house} in the NBA"
+logo.each do |team, logo|
+  puts "#{logo} is the logo for #{house} in the NBA"
 end
 
 #Second Part of 5.3
