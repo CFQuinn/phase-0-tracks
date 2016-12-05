@@ -15,6 +15,9 @@
 
 class Guess
 
+	attr_reader :word
+	attr_accessor :guess_attempt, :done, :word_display, :previously_guessed
+
 	def initialize(word)
 		@word = word
 		@guess_attempt = 0
