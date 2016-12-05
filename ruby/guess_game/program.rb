@@ -9,7 +9,7 @@
 # Takes a letter as a guess (input from user)
 # Guess count increases by one
 # IF the letter matches one from the word, print that letter in the line (replaces the blank dash) and
-# IF NOT, say "you will learn the ways one day young grasshopper, but today is not that day. Try Again?"
+# IF NOT, say "you will learn the ways of the mind one day young grasshopper, but today is not that day. Try Again?"
 
 # Once the guesses are up Or if word is guessed, print congratulatory message if win or taunting message if not
 
@@ -21,7 +21,7 @@ class Guess
 		@done = false
 		@previously_guessed = ""
 		@word_display + "_" * word.length
-		@word_display.each_char {|w| print w, ''}
+		@word_display.each_char {|w| print w, ' ' }
 	end
 
 	def letter_check(letter)
@@ -38,11 +38,49 @@ class Guess
 				letter_index += 1
 			end
 
-			
+			puts "Pretty Good!"
+			@word_display.each_char {|w| print w, ' ' }
+			p @guess_attempt += 1
+		else
 
+		puts "close, but no young grasshopper. Try Again."
+		@word_display.each_char {|w| print w, ' ' }
+		p @guess_attempt += 1
+	end
 
+	previously_guessed << letter
+	end
+
+	def end_game
+		if @word_display == @word
+			@done = true
+			p "Impressive! you got it!"
+		elsif @guess_attempt == @word.length + 3
+			@done = true
+			p "you will learn the ways of the mind one day young grasshopper, but today is not that day. Try Again?"
+		end
+
+		@done
+	end
 				
-
-
-
 end
+
+# GUI
+
+puts "Hey there! enter a word to be guessed by someone else"
+word = gets.chomp
+puts "Ohh, that's a pretty tough one"
+puts "**********"
+
+puts "/nReady to guess the word they chose?"
+puts "this is your word:"
+game = Guess.new(word)
+puts "/nYou'll have #{word.length + 3} chances."
+
+while !game.end_game
+	puts "/nGuess a letter!"
+	letter = gets.chomp
+	game.letter_check(letter)
+end
+
+
