@@ -2,6 +2,7 @@ class TodoList
 
 	def initialize(list)
 		@list = listend
+	end
 
 	def get_items
 		@listend
@@ -11,7 +12,12 @@ class TodoList
 		@list << item
 	end
 
-	def
+	def delete_item(item)
+		@list.delete(item)
+	end
 
-			
-		end
+	def get_item(p)
+		@list[p]
+	end
+		
+end
