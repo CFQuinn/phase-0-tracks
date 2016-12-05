@@ -40,3 +40,40 @@ Ugly.dance("Salsa")
 Shadow.dog_years(3)
 
 #-------Release 2 Below------------
+
+
+
+class DJ_show
+
+	def initialize
+		puts "New Show!"
+	end
+
+	def songs_played(num_songs)
+		puts "The DJ played #{num_songs} songs!"
+	end
+
+	def crowd(turn_out)
+		if turn_out >= 500
+			puts "and the crowd was crazy!"
+		elsif turn_out <= 499 && turn_out >= 350 
+			puts "and the crowd was alright."
+		else
+			puts "and the crowd was weak.."
+	end
+
+end
+
+show =[]
+
+50.times do |s|
+	show[s] = DJ_show.new
+	show[s].songs_played(rand(10..30))
+	show[s].crowd(rand(500))
+end
+end
+
+
+
+
+
