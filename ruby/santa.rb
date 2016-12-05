@@ -3,7 +3,7 @@ class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender
 
-	def initialize
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
@@ -37,22 +37,15 @@ class Santa
 		puts "This Santa is #{@age} years old!"
 	end
 
-	def gender 
-		example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-		@gender = example_genders.sample
-	end
-
-	def ethnicity
-		example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-		@ethnicity = example_ethnicities
-	end
-
 end
+
+gender_input = ["male", "female", "bi", "trans"]
+enthnicity_input = ["latino", "white", "black", "asian"]
 
 santa_count = 0
 
 while santa_count <= 99
-	santa = Santa.new
+	santa = Santa.new(gender_input.sample, enthnicity_input.sample)
 	puts "This is a #{santa.age} year old #{santa.gender} #{santa.ethnicity} Santa and he says #{santa.speak}"
 	santa_count += 1
 end
@@ -63,10 +56,5 @@ end
 #
 #Santa_bio = []
 
-#gender_input = ["male", "female", "bi", "trans"]
-#enthnicity_input = ["latino", "white", "black", "asian"]
-#
-#gender_input.length.times do |w|
-#	Santa_bio << Santa.new(gender_input[w], enthnicity_input[w])
-#end
+
 
