@@ -1,5 +1,5 @@
 #SPECIES ------------------------
-#TBD
+#Dog
 #
 #CHARACTERISTICS ----------------
 #Tail Length: varies
@@ -13,3 +13,12 @@
 #Jump
 #chase tail 
 #roll over
+
+class Puppy
+end
+
+Puppy.methods
+
+fido = Puppy.new
+duchess = Puppy.new
+spot = Puppy.new
